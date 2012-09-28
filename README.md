@@ -24,3 +24,13 @@ The server listens on **port number: 3030** once started using node app.js
 The application uses a mysql database 
 * **Import** localhost.sql to the mysql database 
 * **Change** the required parameters in app.js to match the correct host, port, username, password 
+
+##References
+* Express and Node.js documentation 
+* Reading and Writing stream data
+	* http://nodemanual.org/latest/nodejs_dev_guide/understanding_streams.html 
+* On Progress Event for AJAX post Jquery - Inspiration and Reference
+	* http://dave-bond.com/quick-tips/jquery-ajax-progress-html5/
+
+	
+
