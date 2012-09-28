@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<title>Home</title>
+  	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+  	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+  	<script type="text/javascript" src="js/file.upload.js"></script>
+</head>
+<body>
+	<div id="page-wrapper" class="clear-fix">
+		
+		
+		<div id="main">
+    		<div id="form">
+        		<label class="ui-button-main">
+            		<input id="files" type="file" multiple="" name="files[]">
+            		<span class="ui-button-text">Upload Files</span>
+        		</label>
+    		</div>
+    		<ul id='upload_filelist'>
+    			
+    		</ul>
+    		<ul id='file_uploaded'></ul>
+		</div>
+		<div id="uploded-files">
+			<p id="caption">Uploaded File List</p>
+			<ul id="file-summary">
+				<p id="no-file">No files uploaded yet!</p>
+				<% for(var i=0; i<results.length; i++) { %>
+        			<li class="file-info">
+        				<p class="file-name">
+        					<a href='browse/<%= results[i].fileid %>' target='_BLANK'>
+                				<%= results[i].filename %>
+            				</a>
+            				<span class="file-text">
+            					<%= results[i].filetext %>
+            				</span>
+            			</p>
+            			<div class="supp-info">
+            				<span class="word-count"><span class="span-caption">Words: </span><%= results[i].wordcount %></span>
+            				<span class="line-count"><span class="span-caption">Lines: </span><%= results[i].linecount %></span>
+            			</div>
+        			</li>
+    			<% } %>
+			</ul>
+		</div>
+	</div>
+</body>
+</head>
+

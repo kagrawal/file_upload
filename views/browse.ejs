@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<title>Browse</title>
+  	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+  	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+</head>
+<body>
+	<div id="browse-wrapper">
+		<ul id="breadcrumb">
+			<li class="unselected"><a href="/">Home ></a></li> 
+			<li>Browse</li>
+		</ul>
+		<div id="file-details">
+			<header id="browse-head">
+				<p id="filename"><%= results[0].filename %></p>
+				<p id="filestats">
+					<span class="word-count"><span class="span-caption">Words: </span><%= results[0].wordcount %></span>
+            		<span class="line-count"><span class="span-caption">Lines: </span><%= results[0].linecount %></span>
+				</p>
+			</header>
+			<div id="file-text">
+				<textarea id="file-contents" readonly></textarea>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			$.get('/getFile?fileName=<%= results[0].uploadedfilename %>', function(data) {
+  				$('#file-contents').append(data);
+			});
+		
+		});
+	</script>
+</body>
+</html>
