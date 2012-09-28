@@ -9,7 +9,7 @@ file_upload is a simple file uploader application that allows to upload multiple
 	* Number of words in the file
 	* Top 5 words in the file
 4. "Main" page which lists all of the files that have been uploaded so far and/or are in the process of being uploaded.
-5. Linking in the browse page to bring up the view for that file.
+5. Linking in the main page to bring up the view to show the details of the file.
 
 ##Pre-requisites:
 * express:2.5.8
