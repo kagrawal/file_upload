@@ -5,9 +5,9 @@ file_upload is a simple file uploader application that allows to upload multiple
 1. Allows you to upload a text file through the browser
 2. Shows you a visual indication of upload progress.    
 3. After the file is uploaded, the file is added to the uploaded file list that shows
-	*Number of lines in the file
-	*Number of words in the file
-	*Top 5 words in the file
+	* Number of lines in the file
+	* Number of words in the file
+	* Top 5 words in the file
 4. "Main" page which lists all of the files that have been uploaded so far and/or are in the process of being uploaded.
 5. Linking in the browse page to bring up the view for that file.
 
@@ -18,9 +18,9 @@ file_upload is a simple file uploader application that allows to upload multiple
 * jQuery, jQueryUI
 
 ##Configurations
-The server listens on port number: 3030 once started using node app.js
+The server listens on **port number: 3030** once started using node app.js
 
 ##Database setup
-*The application uses a mysql database 
-*Import localhost.sql to the mysql database 
-*Change the required parameters in app.js to match the correct host, port, username, password 
+The application uses a mysql database 
+* **Import** localhost.sql to the mysql database 
+* **Change** the required parameters in app.js to match the correct host, port, username, password 
